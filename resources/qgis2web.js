@@ -40,20 +40,7 @@ layerSwitcher.hidePanel = function() {};
 layerSwitcher.showPanel();
 
 
-    var searchLayer = new SearchLayer({
-      layer: lyr_WHGFinal2_1,
-      colName: 'URLBaseSlab',
-      zoom: 10,
-      collapsed: true,
-      map: map
-    });
-
-    map.addControl(searchLayer);
-    document.getElementsByClassName('search-layer')[0]
-    .getElementsByTagName('button')[0].className +=
-    ' fa fa-binoculars';
-    
-map.getView().fit([2539276.553866, 1153381.108536, 2539738.826573, 1153729.288404], map.getSize());
+map.getView().fit([2536811.044714, 1152115.692429, 2538445.727871, 1153833.848769], map.getSize());
 
 var NO_POPUP = 0
 var ALL_FIELDS = 1
