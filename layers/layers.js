@@ -1,5 +1,5 @@
 ol.proj.proj4.register(proj4);
-ol.proj.get("EPSG:2056").setExtent([2536664.686924, 1152168.787267, 2538592.085661, 1153780.753931]);
+ol.proj.get("EPSG:2056").setExtent([2536811.044714, 1152002.268511, 2538445.727871, 1153947.272687]);
 var wms_layers = [];
 
 
