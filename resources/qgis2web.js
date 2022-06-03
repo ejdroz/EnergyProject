@@ -40,7 +40,7 @@ layerSwitcher.hidePanel = function() {};
 layerSwitcher.showPanel();
 
 
-map.getView().fit([2535817.961421, 1151751.620015, 2538154.908067, 1153363.586679], map.getSize());
+map.getView().fit([2535889.605702, 1151851.705655, 2537837.729948, 1153177.096168], map.getSize());
 
 var NO_POPUP = 0
 var ALL_FIELDS = 1
@@ -355,6 +355,17 @@ map.on('singleclick', function(evt) {
 
 
 
+
+var geocoder = new Geocoder('nominatim', {
+  provider: 'osm',
+  lang: 'en-US',
+  placeholder: 'Search for ...',
+  limit: 5,
+  keepOpen: true
+});
+map.addControl(geocoder);
+
+document.getElementsByClassName('gcd-gl-btn')[0].className += ' fa fa-search';
 
 var attributionComplete = false;
 map.on("rendercomplete", function(evt) {
