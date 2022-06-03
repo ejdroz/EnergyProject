@@ -27,10 +27,7 @@ var map = new ol.Map({
     overlays: [overlayPopup],
     layers: layersList,
     view: new ol.View({
-         maxZoom: 28, minZoom: 1, projection: new ol.proj.Projection({
-            code: 'EPSG:2056',
-            extent: [-20037508.342789, -20037508.342789, 20037508.342789, 20037508.342789],
-            units: 'm'})
+         maxZoom: 28, minZoom: 1
     })
 });
 
@@ -40,7 +37,7 @@ layerSwitcher.hidePanel = function() {};
 layerSwitcher.showPanel();
 
 
-map.getView().fit([2535889.605702, 1151851.705655, 2537837.729948, 1153177.096168], map.getSize());
+map.getView().fit([737477.305653, 5862483.688948, 738653.310501, 5863292.824904], map.getSize());
 
 var NO_POPUP = 0
 var ALL_FIELDS = 1
@@ -355,17 +352,6 @@ map.on('singleclick', function(evt) {
 
 
 
-
-var geocoder = new Geocoder('nominatim', {
-  provider: 'osm',
-  lang: 'en-US',
-  placeholder: 'Search for ...',
-  limit: 5,
-  keepOpen: true
-});
-map.addControl(geocoder);
-
-document.getElementsByClassName('gcd-gl-btn')[0].className += ' fa fa-search';
 
 var attributionComplete = false;
 map.on("rendercomplete", function(evt) {
